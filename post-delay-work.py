@@ -21,7 +21,7 @@ html = '<html><head></head><body><p>'+text+'</p><br>--<p><b>This is an automated
 msg = MIMEMultipart('alternative')
 msg['Subject'] = subject
 msg['From'] = 'Name Python Delivery <' + sender + '>'
-msg['To'] = ', '.join(recipients)
+msg['To'] = ', '.join(recipients) #or just: msg['To'] = 'recipients' - if u have only one recipient
 msg['Reply-To'] = sender
 msg['Return-Path'] = sender
 msg['X-Mailer'] = 'Python/'+(python_version())
